@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+       
+       <title>Calculator</title>
+   </head>
+   <body>
+     
+    <div id="js-calculator" class="container">
+
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">Calculator VueJs</h1>
+                </div> <br><br><br><br><br><br>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input class=" w-100 p-2" type="text" v-on:keydown="keydown" v-bind:value="expression" >
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                        <button class="btn btn-secundary w-100 p-3" v-on:click="clickOperation('(')">(</button>
+                </div>
+                <div class="col">
+                        <button  class="btn btn-secundary w-100 p-3"v-on:click="clickOperation(')')">)</button>
+                </div>
+                <div class="col">
+                        <button class="btn btn-secundary w-100 p-3"v-on:click="clickOperation('%')">%</button>
+                </div>
+                <div class="col">
+                        <button class="btn btn-primary w-100 p-3" v-on:click="clickOperation('BackSpace')">CE</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <button class="btn btn-light w-100 p-3" v-on:click="clickNumber(7)">7</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(8)">8</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-light w-100 p-3"v-on:click="clickNumber(9)">9</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-secundary w-100 p-3"v-on:click="clickOperation('/')">/</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(4)">4</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-light w-100 p-3" v-on:click="clickNumber(5)">5</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(6)">6</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-secundary w-100 p-3"v-on:click="clickOperation('*')">X</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(1)">1</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-light w-100 p-3" v-on:click="clickNumber(2)">2</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(3)">3</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-secundary w-100 p-3"v-on:click="clickOperation('+')">+</button>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <button  class="btn btn-light w-100 p-3"v-on:click="clickNumber(0)">0</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary w-100 p-3"v-on:click="clickOperation('clear')">C</button>
+                </div>
+                <div class="col">
+                    <button  class="btn btn-primary w-100 p-3"v-on:click="clickOperation('=')">=</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secundary w-100 p-3"v-on:click="clickOperation('-')">-</button>
+                </div>
+            </div>
+
+
+    </div>
+  
+
+ 
+   <script src="dist/main.js"></script>
+   </body>
+</html>
